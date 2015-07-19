@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.borek.telecom.dao.AccountDao;
 import com.borek.telecom.entity.Account;
 @Repository
-public class AccountDaoImpl extends BaseDaoImpl implements AccountDao {
+public class AccountDaoImpl extends BaseDaoImpl implements AccountDao{
 
 	@Override
 	@Transactional
@@ -39,7 +39,8 @@ public class AccountDaoImpl extends BaseDaoImpl implements AccountDao {
 		Criteria criteria = getSession().createCriteria(Account.class);
 		criteria.add(Restrictions.idEq(account.getId()));
 		return (Account) criteria.uniqueResult();
-
+		// cos tam
+		
 	}
 
 	@Override
