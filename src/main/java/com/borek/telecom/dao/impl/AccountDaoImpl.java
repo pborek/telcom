@@ -39,8 +39,6 @@ public class AccountDaoImpl extends BaseDaoImpl implements AccountDao{
 		Criteria criteria = getSession().createCriteria(Account.class);
 		criteria.add(Restrictions.idEq(account.getId()));
 		return (Account) criteria.uniqueResult();
-		// cos tam
-		
 	}
 
 	@Override
