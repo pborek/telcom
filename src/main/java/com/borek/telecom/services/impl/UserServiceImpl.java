@@ -19,46 +19,46 @@ import com.borek.telecom.vos.UserVo;
 @Service
 public class UserServiceImpl implements UserService {
 
-	@Autowired
-	private UserDao userDao;
+    @Autowired
+    private UserDao userDao;
 
-	@Override
-	public UserVo getUserById(String id) {
-		User temp = new User();
-		temp.setId(Integer.parseInt(id));
+    @Override
+    public UserVo getUserById(String id) {
+	User temp = new User();
+	temp.setId(Integer.parseInt(id));
 
-		return UserTransformer.packEntityInToVo(userDao.getUser(temp));
-	}
+	return UserTransformer.packEntityInToVo(userDao.getUser(temp));
+    }
 
-	public List<UserVo> getUsers() {
-		List<UserVo> listUserVo = new ArrayList<UserVo>();
-		List<User> listOfUsers = userDao.getAllUsers();
-		for (int i = 0; i < listOfUsers.size(); i++) {
-			listUserVo
-					.add(UserTransformer.packEntityInToVo(listOfUsers.get(i)));
-
-		}
-
-		return listUserVo;
+    public List<UserVo> getUsers() {
+	List<UserVo> listUserVo = new ArrayList<UserVo>();
+	List<User> listOfUsers = userDao.getAllUsers();
+	for (int i = 0; i < listOfUsers.size(); i++) {
+	    listUserVo
+		    .add(UserTransformer.packEntityInToVo(listOfUsers.get(i)));
 
 	}
 
-	@Override
-	public void addUser(UserVo userVo) {
-		userDao.addUser(UserTransformer.packVInToEnetity(userVo));
+	return listUserVo;
 
-	}
+    }
 
-	@Override
-	public void updateUser(UserVo userVo) {
-		userDao.updateUser(UserTransformer.packVInToEnetity(userVo));
+    @Override
+    public void addUser(UserVo userVo) {
+	userDao.addUser(UserTransformer.packVInToEnetity(userVo));
 
-	}
+    }
 
-	@Override
-	public void deleteUser(UserVo userVo) {
-		userDao.deleteUser(UserTransformer.packVInToEnetity(userVo));
+    @Override
+    public void updateUser(UserVo userVo) {
+	userDao.updateUser(UserTransformer.packVInToEnetity(userVo));
 
-	}
+    }
+
+    @Override
+    public void deleteUser(UserVo userVo) {
+	userDao.deleteUser(UserTransformer.packVInToEnetity(userVo));
+
+    }
 
 }

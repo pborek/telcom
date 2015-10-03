@@ -21,44 +21,44 @@ import com.borek.telecom.vos.UserVo;
 @RequestMapping(value = "/userService")
 public class UserWeb {
 
-	@Autowired
-	private UserService userService;
+    @Autowired
+    private UserService userService;
 
-	@RequestMapping(value = "/addUser", method = RequestMethod.POST)
-	public String addUser(@RequestBody UserVo userVo) {
+    @RequestMapping(value = "/addUser", method = RequestMethod.POST)
+    public String addUser(@RequestBody UserVo userVo) {
 
-		userService.addUser(userVo);
-		return "redirect:/userService/user?id=" + userVo.getId();
-	}
+	userService.addUser(userVo);
+	return "redirect:/userService/user?id=" + userVo.getId();
+    }
 
-	@RequestMapping(value = "/updateUser", method = RequestMethod.POST)
-	public String updateUser(@RequestBody UserVo userVo) {
+    @RequestMapping(value = "/updateUser", method = RequestMethod.POST)
+    public String updateUser(@RequestBody UserVo userVo) {
 
-		userService.updateUser(userVo);
-		return "redirect:/userService/users";
-	}
+	userService.updateUser(userVo);
+	return "redirect:/userService/users";
+    }
 
-	@RequestMapping(value = "/deleteUser", method = RequestMethod.DELETE)
-	public String deleteUser(@RequestBody UserVo userVo) {
+    @RequestMapping(value = "/deleteUser", method = RequestMethod.DELETE)
+    public String deleteUser(@RequestBody UserVo userVo) {
 
-		userService.deleteUser(userVo);
-		return "redirect:/userService/users";
-	}
+	userService.deleteUser(userVo);
+	return "redirect:/userService/users";
+    }
 
-	@RequestMapping(value = "/user", method = RequestMethod.GET, produces = "application/json;charset=utf-8")
-	public @ResponseBody UserVo getUserById(
-			@RequestParam(value = "id") String id) {
+    @RequestMapping(value = "/user", method = RequestMethod.GET, produces = "application/json;charset=utf-8")
+    public @ResponseBody UserVo getUserById(
+	    @RequestParam(value = "id") String id) {
 
-		return userService.getUserById(id);
+	return userService.getUserById(id);
 
-	}
+    }
 
-	@RequestMapping(value = "/users", method = RequestMethod.GET, produces = "application/json;charset=utf-8")
-	public @ResponseBody List<UserVo> getUsers() {
+    @RequestMapping(value = "/users", method = RequestMethod.GET, produces = "application/json;charset=utf-8")
+    public @ResponseBody List<UserVo> getUsers() {
 
-		List<UserVo> listOfUsers = userService.getUsers();
-		return listOfUsers;
+	List<UserVo> listOfUsers = userService.getUsers();
+	return listOfUsers;
 
-	}
+    }
 
 }

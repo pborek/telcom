@@ -9,14 +9,14 @@ import com.borek.telecom.vos.UserVo;
  *
  */
 public interface UserService {
-	UserVo getUserById(String id);
+    UserVo getUserById(String id);
 
-	List<UserVo> getUsers();
+    List<UserVo> getUsers();
 
-	void addUser(UserVo userVo);
+    void addUser(UserVo userVo);
 
-	void updateUser(UserVo userVo);
+    void updateUser(UserVo userVo);
 
-	void deleteUser(UserVo userVo);
+    void deleteUser(UserVo userVo);
 
 }

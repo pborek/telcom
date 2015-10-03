@@ -19,52 +19,50 @@ import com.borek.telecom.vos.AccountVo;
 @Service
 public class AccountServiceImpl implements AccountService {
 
-	@Autowired
-	private AccountDao accountDao;
+    @Autowired
+    private AccountDao accountDao;
 
-	@Override
-	public AccountVo getAccountById(String id) {
-		Account temp = new Account();
-		temp.setId(Integer.parseInt(id));
+    @Override
+    public AccountVo getAccountById(String id) {
+	Account temp = new Account();
+	temp.setId(Integer.parseInt(id));
 
-		return AccountTransformer.packAccountEntityInToVo(accountDao
-				.getAccount(temp));
+	return AccountTransformer.packAccountEntityInToVo(accountDao
+		.getAccount(temp));
 
-	}
+    }
 
-	@Override
-	public List<AccountVo> getAccounts() {
-		List<AccountVo> listAccountVo = new ArrayList<AccountVo>();
-		List<Account> listOfAccounts = accountDao.getAllAccounts();
-		for (int i = 0; i < listOfAccounts.size(); i++) {
-			listAccountVo.add(AccountTransformer
-					.packAccountEntityInToVo(listOfAccounts.get(i)));
-
-		}
-
-		return listAccountVo;
-	}
-
-	@Override
-	public void addAccount(AccountVo accountVo) {
-		accountDao.addAccount(AccountTransformer.packVInToEnetity(accountVo));
+    @Override
+    public List<AccountVo> getAccounts() {
+	List<AccountVo> listAccountVo = new ArrayList<AccountVo>();
+	List<Account> listOfAccounts = accountDao.getAllAccounts();
+	for (int i = 0; i < listOfAccounts.size(); i++) {
+	    listAccountVo.add(AccountTransformer
+		    .packAccountEntityInToVo(listOfAccounts.get(i)));
 
 	}
 
-	@Override
-	public void updateAccount(AccountVo accountVo) {
-		accountDao.updateAccount(AccountTransformer.packVInToEnetity(accountVo));
+	return listAccountVo;
+    }
 
-	}
+    @Override
+    public void addAccount(AccountVo accountVo) {
+	accountDao.addAccount(AccountTransformer.packVInToEnetity(accountVo));
 
-	@Override
-	public void deleteAccount(AccountVo accountVo) {
-		accountDao.deleteAccount(AccountTransformer.packVInToEnetity(accountVo));
+    }
 
-	}
+    @Override
+    public void updateAccount(AccountVo accountVo) {
+	accountDao
+		.updateAccount(AccountTransformer.packVInToEnetity(accountVo));
 
+    }
 
+    @Override
+    public void deleteAccount(AccountVo accountVo) {
+	accountDao
+		.deleteAccount(AccountTransformer.packVInToEnetity(accountVo));
 
-	
-	
+    }
+
 }

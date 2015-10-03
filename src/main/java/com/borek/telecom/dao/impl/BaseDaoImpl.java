@@ -14,23 +14,23 @@ import com.borek.telecom.dao.BaseDao;
 @Repository
 public class BaseDaoImpl implements BaseDao {
 
-	@Autowired
-	public SessionFactory sessionFactory;
+    @Autowired
+    public SessionFactory sessionFactory;
 
-	@Override
-	public SessionFactory getSessionFactory() {
-		return sessionFactory;
-	}
+    @Override
+    public SessionFactory getSessionFactory() {
+	return sessionFactory;
+    }
 
-	@Override
-	public void setSessionFactory(SessionFactory sessionFactory) {
-		this.sessionFactory = sessionFactory;
+    @Override
+    public void setSessionFactory(SessionFactory sessionFactory) {
+	this.sessionFactory = sessionFactory;
 
-	}
+    }
 
-	@Override
-	public Session getSession() {
-		return sessionFactory.getCurrentSession();
-	}
+    @Override
+    public Session getSession() {
+	return sessionFactory.getCurrentSession();
+    }
 
 }

@@ -10,14 +10,14 @@ import com.borek.telecom.vos.AccountVo;
  */
 public interface AccountService {
 
-	AccountVo getAccountById(String id);
+    AccountVo getAccountById(String id);
 
-	List<AccountVo> getAccounts();
+    List<AccountVo> getAccounts();
 
-	void addAccount(AccountVo accountVo);
+    void addAccount(AccountVo accountVo);
 
-	void updateAccount(AccountVo accountVo);
+    void updateAccount(AccountVo accountVo);
 
-	void deleteAccount(AccountVo accountVo);
+    void deleteAccount(AccountVo accountVo);
 
 }

@@ -9,14 +9,14 @@ import com.borek.telecom.entity.Account;
  *
  */
 public interface AccountDao {
-	void addAccount(Account account);
+    void addAccount(Account account);
 
-	void deleteAccount(Account account);
+    void deleteAccount(Account account);
 
-	void updateAccount(Account account);
+    void updateAccount(Account account);
 
-	Account getAccount(Account account);
+    Account getAccount(Account account);
 
-	public List<Account> getAllAccounts();
+    public List<Account> getAllAccounts();
 
 }

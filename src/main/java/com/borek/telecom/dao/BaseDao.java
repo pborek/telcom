@@ -9,10 +9,10 @@ import org.hibernate.SessionFactory;
  */
 public interface BaseDao {
 
-	SessionFactory getSessionFactory();
+    SessionFactory getSessionFactory();
 
-	void setSessionFactory(SessionFactory sessionFactory);
+    void setSessionFactory(SessionFactory sessionFactory);
 
-	Session getSession();
+    Session getSession();
 
 }
