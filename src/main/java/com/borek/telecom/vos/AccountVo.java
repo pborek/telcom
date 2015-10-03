@@ -2,6 +2,10 @@ package com.borek.telecom.vos;
 
 import java.sql.Date;
 
+/**
+ * @author Piotr Borek
+ *
+ */
 public class AccountVo {
 
 	private int id;

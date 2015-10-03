@@ -12,6 +12,10 @@ import com.borek.telecom.service.UserService;
 import com.borek.telecom.utils.UserTransformer;
 import com.borek.telecom.vos.UserVo;
 
+/**
+ * @author Piotr Borek
+ *
+ */
 @Service
 public class UserServiceImpl implements UserService {
 

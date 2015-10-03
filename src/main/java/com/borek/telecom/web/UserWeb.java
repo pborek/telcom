@@ -13,6 +13,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.borek.telecom.service.UserService;
 import com.borek.telecom.vos.UserVo;
 
+/**
+ * @author Piotr Borek
+ *
+ */
 @Controller
 @RequestMapping(value = "/userService")
 public class UserWeb {

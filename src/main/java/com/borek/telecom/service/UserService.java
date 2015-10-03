@@ -4,6 +4,10 @@ import java.util.List;
 
 import com.borek.telecom.vos.UserVo;
 
+/**
+ * @author Piotr Borek
+ *
+ */
 public interface UserService {
 	UserVo getUserById(String id);
 

@@ -4,6 +4,10 @@ import java.util.List;
 
 import com.borek.telecom.vos.AccountVo;
 
+/**
+ * @author Piotr Borek
+ *
+ */
 public interface AccountService {
 
 	AccountVo getAccountById(String id);

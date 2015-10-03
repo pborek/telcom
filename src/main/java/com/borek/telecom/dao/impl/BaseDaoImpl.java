@@ -7,6 +7,10 @@ import org.springframework.stereotype.Repository;
 
 import com.borek.telecom.dao.BaseDao;
 
+/**
+ * @author Piotr Borek
+ *
+ */
 @Repository
 public class BaseDaoImpl implements BaseDao {
 

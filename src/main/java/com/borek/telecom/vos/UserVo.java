@@ -2,6 +2,10 @@ package com.borek.telecom.vos;
 
 import java.math.BigInteger;
 
+/**
+ * @author Piotr Borek
+ *
+ */
 public class UserVo {
 
 	private int id;

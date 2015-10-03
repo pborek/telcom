@@ -10,6 +10,10 @@ import org.springframework.transaction.annotation.Transactional;
 import com.borek.telecom.dao.AccountDao;
 import com.borek.telecom.entity.Account;
 
+/**
+ * @author Piotr Borek
+ *
+ */
 @Repository
 public class AccountDaoImpl extends BaseDaoImpl implements AccountDao {
 

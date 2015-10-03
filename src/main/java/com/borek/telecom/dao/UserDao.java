@@ -4,6 +4,10 @@ import java.util.List;
 
 import com.borek.telecom.entity.User;
 
+/**
+ * @author Piotr Borek
+ *
+ */
 public interface UserDao {
 
 	void addUser(User user);

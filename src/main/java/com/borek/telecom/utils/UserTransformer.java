@@ -3,6 +3,10 @@ package com.borek.telecom.utils;
 import com.borek.telecom.entity.User;
 import com.borek.telecom.vos.UserVo;
 
+/**
+ * @author Piotr Borek
+ *
+ */
 public class UserTransformer {
 
 	public static UserVo packEntityInToVo(User user) {

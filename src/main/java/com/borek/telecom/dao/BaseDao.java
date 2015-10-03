@@ -3,6 +3,10 @@ package com.borek.telecom.dao;
 import org.hibernate.*;
 import org.hibernate.SessionFactory;
 
+/**
+ * @author Piotr Borek
+ *
+ */
 public interface BaseDao {
 
 	SessionFactory getSessionFactory();

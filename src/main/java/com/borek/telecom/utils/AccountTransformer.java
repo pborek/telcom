@@ -3,6 +3,10 @@ package com.borek.telecom.utils;
 import com.borek.telecom.entity.Account;
 import com.borek.telecom.vos.AccountVo;
 
+/**
+ * @author Piotr Borek
+ *
+ */
 public class AccountTransformer {
 	public static AccountVo packAccountEntityInToVo(Account account) {
 

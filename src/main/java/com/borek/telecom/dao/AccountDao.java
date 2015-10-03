@@ -4,6 +4,10 @@ import java.util.List;
 
 import com.borek.telecom.entity.Account;
 
+/**
+ * @author Piotr Borek
+ *
+ */
 public interface AccountDao {
 	void addAccount(Account account);
 

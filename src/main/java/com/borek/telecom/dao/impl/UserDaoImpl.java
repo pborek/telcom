@@ -12,6 +12,10 @@ import org.springframework.transaction.annotation.Transactional;
 import com.borek.telecom.dao.UserDao;
 import com.borek.telecom.entity.User;
 
+/**
+ * @author Piotr Borek
+ *
+ */
 @Repository
 public class UserDaoImpl extends BaseDaoImpl implements UserDao {
 

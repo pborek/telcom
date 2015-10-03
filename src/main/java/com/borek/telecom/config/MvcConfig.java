@@ -24,6 +24,10 @@ import org.springframework.web.servlet.view.JstlView;
 import com.borek.telecom.entity.Account;
 import com.borek.telecom.entity.User;
 
+/**
+ * @author Piotr Borek
+ *
+ */
 @EnableWebMvc
 @Configuration
 @ComponentScan(basePackages = {"com.borek.telecom.*"})

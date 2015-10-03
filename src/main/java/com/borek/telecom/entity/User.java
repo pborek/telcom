@@ -7,6 +7,10 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/**
+ * @author Piotr Borek
+ *
+ */
 @Entity
 @Table(name = "user", schema = "telecom")
 public class User {
