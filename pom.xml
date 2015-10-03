@@ -163,6 +163,13 @@
 			<version>2.4.1.1</version>
 		</dependency>
 
+		<!-- Resteasy client -->
+		<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-client</artifactId>
+			<version>3.0.13.Final</version>
+		</dependency>
+
 	</dependencies>
 	<build>
 		<finalName>telecom</finalName>
