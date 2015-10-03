@@ -36,6 +36,17 @@ public class MainController {
 	  return model;
  
 	}
+	
+	@RequestMapping(value = "/admin/cos", method = RequestMethod.GET)
+	public ModelAndView adminPage1() {
+ 
+	  ModelAndView model = new ModelAndView();
+	  model.addObject("title", "Spring Security Login Form - Databsdasdasase Authentication");
+	  model.addObject("message", "This page is for ROLE_ADMIN only!");
+	  model.setViewName("admin");
+	  return model;
+ 
+	}
  
 	//Spring Security see this :
 		@RequestMapping(value = "/login", method = RequestMethod.GET)

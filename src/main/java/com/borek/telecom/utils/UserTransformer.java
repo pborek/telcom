@@ -24,10 +24,11 @@ public class UserTransformer {
 		userVo.setBasicPhone(user.getBasicPhone());
 		userVo.setContactPhone(user.getContactPhone());
 		userVo.setEmail(user.getEmail());
+		userVo.setAccountId(user.getAccountId());
 		return userVo;
 
 	}
-	
+
 	public static User packVInToEnetity(UserVo userVo) {
 
 		User user = new User();
@@ -47,6 +48,7 @@ public class UserTransformer {
 		user.setBasicPhone(userVo.getBasicPhone());
 		user.setContactPhone(userVo.getContactPhone());
 		user.setEmail(userVo.getEmail());
+		user.setAccountId(userVo.getAccountId());
 		return user;
 
 	}

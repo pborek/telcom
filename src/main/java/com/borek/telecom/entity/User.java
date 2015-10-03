@@ -33,6 +33,16 @@ public class User {
 	private Integer basicPhone;
 	@Column(name = "contact_phone")
 	private Integer contactPhone;
+	@Column(name = "account_id", nullable = false, columnDefinition = "int default 10000")
+	private Integer accountId;
+
+	public Integer getAccountId() {
+		return accountId;
+	}
+
+	public void setAccountId(Integer accountId) {
+		this.accountId = accountId;
+	}
 
 	public String getPostCode() {
 		return postCode;
@@ -49,7 +59,6 @@ public class User {
 	public BigInteger getPesel() {
 		return pesel;
 	}
-
 
 	public String getDocument() {
 		return document;

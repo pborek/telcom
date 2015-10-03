@@ -28,7 +28,7 @@ import com.borek.telecom.entity.User;
 @Configuration
 @ComponentScan(basePackages = {"com.borek.telecom.*"})
 @EnableTransactionManagement
-@Import(SecurityConfig.class)
+//@Import(SecurityConfig.class)
 public class MvcConfig extends WebMvcConfigurerAdapter {
 	
 	 @Override

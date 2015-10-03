@@ -9,43 +9,45 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.borek.telecom.dao.AccountDao;
 import com.borek.telecom.entity.Account;
+
 @Repository
-public class AccountDaoImpl extends BaseDaoImpl implements AccountDao{
+public class AccountDaoImpl extends BaseDaoImpl implements AccountDao {
 
 	@Override
 	@Transactional
 	public void addAccount(Account account) {
-		// TODO Auto-generated method stub
+		getSession().save(account);
 
 	}
 
 	@Override
 	@Transactional
 	public void deleteAccount(Account account) {
-		// TODO Auto-generated method stub
+		getSession().delete(account);
 
 	}
 
 	@Override
 	@Transactional
 	public void updateAccount(Account account) {
-		// TODO Auto-generated method stub
-
+		getSession().update(account);
 	}
 
-	@Override
 	@Transactional
+	@Override
 	public Account getAccount(Account account) {
 		Criteria criteria = getSession().createCriteria(Account.class);
 		criteria.add(Restrictions.idEq(account.getId()));
 		return (Account) criteria.uniqueResult();
+
 	}
 
-	@Override
 	@Transactional
+	@Override
 	public List<Account> getAllAccounts() {
 		Criteria criteria = getSession().createCriteria(Account.class);
 		return criteria.list();
+
 	}
 
 }

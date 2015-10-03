@@ -28,7 +28,7 @@
 	width: 300px;
 	padding: 20px;
 	margin: 100px auto;
-	background: #fff;
+	background: #F0FFD1;
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	border: 1px solid #000;
@@ -37,7 +37,7 @@
 </head>
 <body onload='document.loginForm.username.focus();'>
  
-	<h1>Spring Security Login Form (Database Authentication)</h1>
+	<h1>Welcome in TeleCom </h1>
  
 	<div id="login-box">
  

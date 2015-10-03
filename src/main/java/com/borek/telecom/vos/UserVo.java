@@ -19,6 +19,15 @@ public class UserVo {
 	private String email;
 	private Integer basicPhone;
 	private Integer contactPhone;
+	private Integer accountId;
+
+	public Integer getAccountId() {
+		return accountId;
+	}
+
+	public void setAccountId(Integer accountId) {
+		this.accountId = accountId;
+	}
 
 	public int getId() {
 		return id;

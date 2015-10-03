@@ -7,7 +7,7 @@ public class AccountTransformer {
 	public static AccountVo packAccountEntityInToVo(Account account) {
 
 		AccountVo accountVo = new AccountVo();
-		
+
 		accountVo.setId(account.getId());
 		accountVo.setInternetMb(account.getInternetMb());
 		accountVo.setMinutesToTheNetwork(account.getMinutesToTheNetwork());
@@ -21,8 +21,8 @@ public class AccountTransformer {
 				.getValidityDateOfOutgoingCalls());
 		return accountVo;
 	}
-	
-	public static Account packAccountEntityInToVo(AccountVo accountVo) {
+
+	public static Account packVInToEnetity(AccountVo accountVo) {
 
 		Account account = new Account();
 		account.setId(accountVo.getId());

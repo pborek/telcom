@@ -12,7 +12,7 @@ import javax.persistence.Table;
 public class Account {
 
 	@Id
-	@Column(name = "account_id")
+	@Column(name = "account_id", nullable = false, columnDefinition = "int default 10000")
 	private int id;
 	
 	@Column(name = "activation_date")

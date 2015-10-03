@@ -3,7 +3,6 @@ package com.borek.telecom.services.impl;
 import java.util.ArrayList;
 import java.util.List;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +17,6 @@ public class UserServiceImpl implements UserService {
 
 	@Autowired
 	private UserDao userDao;
-
 
 	@Override
 	public UserVo getUserById(String id) {
@@ -42,10 +40,21 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public void updateUser(UserVo userVo) {
-		userDao.updateUser(UserTransformer.packVInToEnetity(userVo));
-		
+	public void addUser(UserVo userVo) {
+		userDao.addUser(UserTransformer.packVInToEnetity(userVo));
+
 	}
 
+	@Override
+	public void updateUser(UserVo userVo) {
+		userDao.updateUser(UserTransformer.packVInToEnetity(userVo));
+
+	}
+
+	@Override
+	public void deleteUser(UserVo userVo) {
+		userDao.deleteUser(UserTransformer.packVInToEnetity(userVo));
+
+	}
 
 }

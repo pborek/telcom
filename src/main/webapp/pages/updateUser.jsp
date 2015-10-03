@@ -4,23 +4,42 @@
 <%@ page session="false" %>
 <html>
 <head>
-    <title>Person Page</title>
-    <style type="text/css">
-        .tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;}
-        .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
-        .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
-        .tg .tg-4eph{background-color:#f9f9f9}
-    </style>
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <meta name="_csrf" content="${_csrf.token}" />
+    <!-- default header name is X-CSRF-TOKEN -->
+    <meta name="_csrf_header" content="${_csrf.headerName}" />
+    <title>Update User</title>
 </head>
 <body>
 <h1>
     Add a User
 </h1>
+
+<h1>Title : ${title}</h1>
+	<h1>Message : ${message}</h1>
+ 
+	
+		<!-- For login user -->
+		<c:url value="/updateuser" var="updateUrl" />
+		<form action="${updateUrl}" method="post" id="logoutForm">
+			
+		
+<h1>cos tam</h1>
+ 
+ </form>
+
+	
+
+ 
+ 
+ 
  
 <%--  <c:url var="addAction" value="/person/add" ></c:url> --%>
  
-<form:form action="${addAction}" commandName="user">
-<table>
+<%--  <c:url value="/userService/updateuser" var="updateUrl"/>
+<form action="${updateUrl}" method="post">   --%>
+
+<%-- <table>
     <c:if test="${!empty user.name}">
     <tr>
         <td>
@@ -67,7 +86,7 @@
         </td>
     </tr>
 </table>  
-</form:form>
+</form>
 <br>
 <h3>Persons List</h3>
 <c:if test="${!empty getAllUsers}">
@@ -89,6 +108,6 @@
         </tr>
     </c:forEach>
     </table>
-</c:if>
+</c:if> --%>
 </body>
 </html>
