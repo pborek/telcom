@@ -1,8 +1,8 @@
 package com.borek.telecom.service;
 
-import java.util.List;
+import com.borek.telecom.entity.Account;
 
-import com.borek.telecom.vos.AccountVo;
+import java.util.List;
 
 /**
  * @author Piotr Borek
@@ -10,14 +10,14 @@ import com.borek.telecom.vos.AccountVo;
  */
 public interface AccountService {
 
-    AccountVo getAccountById(String id);
+  Account getAccountById(String id);
 
-    List<AccountVo> getAccounts();
+  List<Account> getAccounts();
 
-    void addAccount(AccountVo accountVo);
+  void addAccount(Account account);
 
-    void updateAccount(AccountVo accountVo);
+  void updateAccount(Account account);
 
-    void deleteAccount(AccountVo accountVo);
+  void deleteAccount(Account account);
 
 }

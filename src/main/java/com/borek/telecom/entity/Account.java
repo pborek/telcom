@@ -1,11 +1,10 @@
 package com.borek.telecom.entity;
 
-import java.sql.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.sql.Date;
 
 /**
  * @author Piotr Borek
@@ -15,104 +14,105 @@ import javax.persistence.Table;
 @Table(name = "account", schema = "telecom")
 public class Account {
 
-    @Id
-    @Column(name = "account_id", nullable = false, columnDefinition = "int default 10000")
-    private int id;
+  @Id
+  @Column(name = "account_id", nullable = false, columnDefinition = "int default 10000")
+  private int id;
 
-    @Column(name = "activation_date")
-    private Date activationDate;
+  @Column(name = "activation_date")
+  private Date activationDate;
 
-    @Column(name = "account_balance")
-    private Double accountBalance;
+  @Column(name = "account_balance")
+  private int accountBalance;
 
-    @Column(name = "validity_date_of_outgoing_calls")
-    private Date validityDateOfOutgoingCalls;
 
-    @Column(name = "validity_date_of_incoming_calls")
-    private Date validityDateOfIncomingCalls;
+  @Column(name = "validity_date_of_outgoing_calls")
+  private Date validityDateOfOutgoingCalls;
 
-    @Column(name = "internet_mb")
-    private Integer internetMb;
+  @Column(name = "validity_date_of_incoming_calls")
+  private Date validityDateOfIncomingCalls;
 
-    @Column(name = "minutes_to_the_network")
-    private Integer minutesToTheNetwork;
+  @Column(name = "internet_mb")
+  private Integer internetMb;
 
-    @Column(name = "minutes_for_all")
-    private Integer minutesForAll;
+  @Column(name = "minutes_to_the_network")
+  private Integer minutesToTheNetwork;
 
-    @Column(name = "sms_to_all")
-    private Integer smsToAll;
+  @Column(name = "minutes_for_all")
+  private Integer minutesForAll;
 
-    public int getId() {
-	return id;
-    }
+  @Column(name = "sms_to_all")
+  private Integer smsToAll;
 
-    public void setId(int id) {
-	this.id = id;
-    }
+  public int getId() {
+    return id;
+  }
 
-    public Date getActivationDate() {
-	return activationDate;
-    }
+  public void setId(int id) {
+    this.id = id;
+  }
 
-    public void setActivationDate(Date activationDate) {
-	this.activationDate = activationDate;
-    }
+  public Date getActivationDate() {
+    return activationDate;
+  }
 
-    public Double getAccountBalance() {
-	return accountBalance;
-    }
+  public void setActivationDate(Date activationDate) {
+    this.activationDate = activationDate;
+  }
 
-    public void setAccountBalance(Double accountBalance) {
-	this.accountBalance = accountBalance;
-    }
+  public int getAccountBalance() {
+    return accountBalance;
+  }
 
-    public Date getValidityDateOfOutgoingCalls() {
-	return validityDateOfOutgoingCalls;
-    }
+  public void setAccountBalance(int accountBalance) {
+    this.accountBalance = accountBalance;
+  }
 
-    public void setValidityDateOfOutgoingCalls(Date validityDateOfOutgoingCalls) {
-	this.validityDateOfOutgoingCalls = validityDateOfOutgoingCalls;
-    }
+  public Date getValidityDateOfOutgoingCalls() {
+    return validityDateOfOutgoingCalls;
+  }
 
-    public Date getValidityDateOfIncomingCalls() {
-	return validityDateOfIncomingCalls;
-    }
+  public void setValidityDateOfOutgoingCalls(Date validityDateOfOutgoingCalls) {
+    this.validityDateOfOutgoingCalls = validityDateOfOutgoingCalls;
+  }
 
-    public void setValidityDateOfIncomingCalls(Date validityDateOfIncomingCalls) {
-	this.validityDateOfIncomingCalls = validityDateOfIncomingCalls;
-    }
+  public Date getValidityDateOfIncomingCalls() {
+    return validityDateOfIncomingCalls;
+  }
 
-    public Integer getInternetMb() {
-	return internetMb;
-    }
+  public void setValidityDateOfIncomingCalls(Date validityDateOfIncomingCalls) {
+    this.validityDateOfIncomingCalls = validityDateOfIncomingCalls;
+  }
 
-    public void setInternetMb(Integer internetMb) {
-	this.internetMb = internetMb;
-    }
+  public Integer getInternetMb() {
+    return internetMb;
+  }
 
-    public Integer getMinutesToTheNetwork() {
-	return minutesToTheNetwork;
-    }
+  public void setInternetMb(Integer internetMb) {
+    this.internetMb = internetMb;
+  }
 
-    public void setMinutesToTheNetwork(Integer minutesToTheNetwork) {
-	this.minutesToTheNetwork = minutesToTheNetwork;
-    }
+  public Integer getMinutesToTheNetwork() {
+    return minutesToTheNetwork;
+  }
 
-    public Integer getMinutesForAll() {
-	return minutesForAll;
-    }
+  public void setMinutesToTheNetwork(Integer minutesToTheNetwork) {
+    this.minutesToTheNetwork = minutesToTheNetwork;
+  }
 
-    public void setMinutesForAll(Integer minutesForAll) {
-	this.minutesForAll = minutesForAll;
-    }
+  public Integer getMinutesForAll() {
+    return minutesForAll;
+  }
 
-    public Integer getSmsToAll() {
-	return smsToAll;
-    }
+  public void setMinutesForAll(Integer minutesForAll) {
+    this.minutesForAll = minutesForAll;
+  }
 
-    public void setSmsToAll(Integer smsToAll) {
-	this.smsToAll = smsToAll;
-    }
+  public Integer getSmsToAll() {
+    return smsToAll;
+  }
+
+  public void setSmsToAll(Integer smsToAll) {
+    this.smsToAll = smsToAll;
+  }
 
 }

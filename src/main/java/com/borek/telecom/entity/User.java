@@ -1,170 +1,157 @@
 package com.borek.telecom.entity;
 
-import java.math.BigInteger;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.math.BigInteger;
 
 /**
  * @author Piotr Borek
  *
  */
 @Entity
-@Table(name = "user", schema = "telecom")
+@Table(name = "users", schema = "telecom")
 public class User {
 
-    @Id
-    private int id;
-    private String name;
-    private String surname;
-    private String password;
-    private BigInteger pesel;
-    private String document;
-    private String street;
-    private String city;
-    private String province;
-    private String email;
+  @Id
+  private int id;
+  @Column(name = "login")
+  private String login;
+  @Column(name = "surname")
+  private String surname;
+  @Column(name = "name")
+  private String name;
 
-    @Column(name = "home_nr")
-    private Integer homeNr;
-    @Column(name = "post_code")
-    private String postCode;
-    @Column(name = "flat_nr")
-    private Integer flatNr;
-    @Column(name = "basic_phone")
-    private Integer basicPhone;
-    @Column(name = "contact_phone")
-    private Integer contactPhone;
-    @Column(name = "account_id", nullable = false, columnDefinition = "int default 10000")
-    private Integer accountId;
 
-    public Integer getAccountId() {
-	return accountId;
-    }
+  private String password;
+  private BigInteger pesel;
+  private String street;
+  private String city;
+  private String email;
 
-    public void setAccountId(Integer accountId) {
-	this.accountId = accountId;
-    }
+  @Column(name = "home_nr")
+  private Integer homeNr;
+  @Column(name = "post_code")
+  private String postCode;
+  @Column(name = "flat_nr")
+  private Integer flatNr;
+  @Column(name = "basic_phone")
+  private Integer basicPhone;
+  //@OneToOne()
+  @Column(name = "account_id", nullable = false, columnDefinition = "int default 10000")
+  private Integer accountId;
 
-    public String getPostCode() {
-	return postCode;
-    }
+  public String getName() {
+    return name;
+  }
 
-    public void setPostCode(String postCode) {
-	this.postCode = postCode;
-    }
+  public void setName(String name) {
+    this.name = name;
+  }
 
-    public void setPesel(BigInteger pesel) {
-	this.pesel = pesel;
-    }
+  public Integer getAccountId() {
+    return accountId;
+  }
 
-    public BigInteger getPesel() {
-	return pesel;
-    }
+  public void setAccountId(Integer accountId) {
+    this.accountId = accountId;
+  }
 
-    public String getDocument() {
-	return document;
-    }
+  public String getPostCode() {
+    return postCode;
+  }
 
-    public void setDocument(String document) {
-	this.document = document;
-    }
+  public void setPostCode(String postCode) {
+    this.postCode = postCode;
+  }
 
-    public String getStreet() {
-	return street;
-    }
+  public void setPesel(BigInteger pesel) {
+    this.pesel = pesel;
+  }
 
-    public void setStreet(String street) {
-	this.street = street;
-    }
+  public BigInteger getPesel() {
+    return pesel;
+  }
 
-    public int getId() {
-	return id;
-    }
+  public String getStreet() {
+    return street;
+  }
 
-    public void setId(int id) {
-	this.id = id;
-    }
+  public void setStreet(String street) {
+    this.street = street;
+  }
 
-    public String getName() {
-	return name;
-    }
+  public int getId() {
+    return id;
+  }
 
-    public void setName(String name) {
-	this.name = name;
-    }
+  public void setId(int id) {
+    this.id = id;
+  }
 
-    public String getSurname() {
-	return surname;
-    }
+  public String getLogin() {
+    return login;
+  }
 
-    public void setSurname(String surname) {
-	this.surname = surname;
-    }
+  public void setLogin(String login) {
+    this.login = login;
+  }
 
-    public String getPassword() {
-	return password;
-    }
+  public String getSurname() {
+    return surname;
+  }
 
-    public void setPassword(String password) {
-	this.password = password;
-    }
+  public void setSurname(String surname) {
+    this.surname = surname;
+  }
 
-    public Integer getFlatNr() {
-	return flatNr;
-    }
+  public String getPassword() {
+    return password;
+  }
 
-    public void setFlatNr(Integer flatNr) {
-	this.flatNr = flatNr;
-    }
+  public void setPassword(String password) {
+    this.password = password;
+  }
 
-    public Integer getHomeNr() {
-	return homeNr;
-    }
+  public Integer getFlatNr() {
+    return flatNr;
+  }
 
-    public void setHomeNr(Integer homeNr) {
-	this.homeNr = homeNr;
-    }
+  public void setFlatNr(Integer flatNr) {
+    this.flatNr = flatNr;
+  }
 
-    public String getCity() {
-	return city;
-    }
+  public Integer getHomeNr() {
+    return homeNr;
+  }
 
-    public void setCity(String city) {
-	this.city = city;
-    }
+  public void setHomeNr(Integer homeNr) {
+    this.homeNr = homeNr;
+  }
 
-    public String getProvince() {
-	return province;
-    }
+  public String getCity() {
+    return city;
+  }
 
-    public void setProvince(String province) {
-	this.province = province;
-    }
+  public void setCity(String city) {
+    this.city = city;
+  }
 
-    public String getEmail() {
-	return email;
-    }
+  public String getEmail() {
+    return email;
+  }
 
-    public void setEmail(String email) {
-	this.email = email;
-    }
+  public void setEmail(String email) {
+    this.email = email;
+  }
 
-    public Integer getBasicPhone() {
-	return basicPhone;
-    }
+  public Integer getBasicPhone() {
+    return basicPhone;
+  }
 
-    public void setBasicPhone(Integer basicPhone) {
-	this.basicPhone = basicPhone;
-    }
+  public void setBasicPhone(Integer basicPhone) {
+    this.basicPhone = basicPhone;
+  }
 
-    public Integer getContactPhone() {
-	return contactPhone;
-    }
-
-    public void setContactPhone(Integer contactPhone) {
-	this.contactPhone = contactPhone;
-    }
 }

@@ -1,6 +1,6 @@
 package com.borek.telecom.dao;
 
-import org.hibernate.*;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
 /**
@@ -9,10 +9,10 @@ import org.hibernate.SessionFactory;
  */
 public interface BaseDao {
 
-    SessionFactory getSessionFactory();
+  SessionFactory getSessionFactory();
 
-    void setSessionFactory(SessionFactory sessionFactory);
+  void setSessionFactory(SessionFactory sessionFactory);
 
-    Session getSession();
+  Session getSession();
 
 }

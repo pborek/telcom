@@ -1,22 +1,22 @@
 package com.borek.telecom.service;
 
-import java.util.List;
+import com.borek.telecom.entity.User;
 
-import com.borek.telecom.vos.UserVo;
+import java.util.List;
 
 /**
  * @author Piotr Borek
  *
  */
 public interface UserService {
-    UserVo getUserById(String id);
+  User getUserById(String id);
 
-    List<UserVo> getUsers();
+  List<User> getUsers();
 
-    void addUser(UserVo userVo);
+  void addUser(User user);
 
-    void updateUser(UserVo userVo);
+  void updateUser(User user);
 
-    void deleteUser(UserVo userVo);
+  void deleteUser(User user);
 
 }
